@@ -4,7 +4,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import ContactScreen from './screens/ContactScreen';
 import HomeScreen from './screens/HomeScreen';
-import EventsScreen from './screens/SettingsScreen';
+import EventsScreen from './screens/EventsScreen';
 import { FontAwesome } from '@expo/vector-icons';
 
 const Tab = createBottomTabNavigator();
@@ -33,7 +33,10 @@ export default function App() {
         })}
       >
         <Tab.Screen name="Home" component={HomeScreen} />
-        <Tab.Screen name="Event" component={EventsScreen} />
+        <Tab.Screen 
+        name="Event" 
+        options={{ headerShown: false }}
+        component={EventsScreen} />
         <Tab.Screen name="Contact" component={ContactScreen} />
       </Tab.Navigator>
     </NavigationContainer>
