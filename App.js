@@ -35,7 +35,7 @@ export default function App() {
         <Tab.Screen name="Home" component={HomeScreen} />
         <Tab.Screen 
         name="Events" 
-        //options={{ headerShown: false }}
+        options={{ headerShown: false }}
         component={EventsScreen} />
         <Tab.Screen name="Contact" component={ContactScreen} />
       </Tab.Navigator>
